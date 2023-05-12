@@ -1,4 +1,7 @@
 // imports
+import './style.css';
+import { displayPageTemplate } from './page-template';
+
 
 // libraries 
 const projects = [];
@@ -46,3 +49,7 @@ projects.push(sampleProject3);
 
 // functions
 
+////////// load page template //////////
+displayPageTemplate();
+
+console.log(projects);

@@ -1,0 +1,113 @@
+body{ 
+    background-color: #1D2D44;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+  /* TOP NAVIGATION BAR STYLES */
+.navBar { 
+    background-color: #3E5C76;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navBar div { 
+    flex: 1 1 33%;
+}
+
+    .navBarLeft { 
+        font-size: 50px;
+        font-weight: bolder;
+        color: #F0EBD8;
+    }
+    .addProjectBtn { 
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;;
+        background-color: #F0EBD8;
+    }
+        .addProjectBtn:hover { 
+            background-color: #3E5C76;
+            color: #F0EBD8;
+            border-radius: 10px;
+            border: 1px solid #F0EBD8;
+        }
+    .navBarRight { 
+        font-size: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+    }
+        .loginbtn { 
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;;
+            background-color: #F0EBD8;
+        }
+            .loginbtn:hover { 
+                background-color: #3E5C76;
+                color: #F0EBD8;
+                border-radius: 10px;
+                border: 1px solid #F0EBD8;
+            }
+
+        .signupbtn { 
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;;
+            background-color: #F0EBD8;
+        }
+            .signupbtn:hover { 
+                background-color: #3E5C76;
+                color: #F0EBD8;
+                border-radius: 10px;
+                border: 1px solid #F0EBD8;
+            }
+
+/* VERTICAL NAVIGATION BAR STYLES */
+
+.vnav { 
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    gap: 20px;
+
+    position: fixed;
+    top: 50vh;
+    left: 15px;
+    width: 200px;
+    height: 100%;
+}
+
+    .vnav-btn{ 
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+        .vnav-btn:hover { 
+            padding-left: 20px;
+            cursor: pointer;
+        }
+.content { 
+    width: 700px;
+    height: 100px;
+    background-color: red;
+    margin-left: 60px;
+}
