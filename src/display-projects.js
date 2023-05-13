@@ -25,6 +25,10 @@ function displayProjects() {
                 projectBanner.appendChild(deleteProjectBtn);
                     deleteProjectBtn.addEventListener('click', () => {
                         console.log('delete' + project.name + 'button clicked');
+                        projects.splice(projects.indexOf(project), 1);
+                        console.log(projects);
+                        content.innerHTML = '';
+                        displayProjects();
                     }
                 );
                 const projectTitle = document.createElement('div');
