@@ -5,6 +5,9 @@
 
 
   // imports 
+    //moduels
+  import { displayAddProjectWindow } from './add-project-window';
+    //images
   import HomeIcon from './icons/Home.png';
   const homeIcon = new Image();
   homeIcon.src = HomeIcon;
@@ -32,6 +35,10 @@ function displayPageTemplate() {
     addProjectBtn.classList.add('addProjectBtn');
     addProjectBtn.innerHTML = 'Add Project';
     NavBar.appendChild(addProjectBtn);
+      addProjectBtn.addEventListener('click', () => {
+        displayAddProjectWindow();
+      });
+
     const navBarRight = document.createElement('div');
     navBarRight.classList.add('navBarRight');
     navBarRight.innerHTML = '';
