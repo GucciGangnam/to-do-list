@@ -1,6 +1,7 @@
 // imports
 import './style.css';
 import { displayPageTemplate } from './page-template';
+import { displayProjects } from './display-projects';
 
 
 // libraries 
@@ -15,6 +16,7 @@ class Project {
     }
 }
 
+
 class Task {
     constructor(name, description, dueDate, priority) {
         this.name = name;
@@ -25,7 +27,7 @@ class Task {
 }
 
 ////////////////// sample projects and tasks //////////////////
-const sampleProject1 = new Project('Project 1');
+const sampleProject1 = new Project('Test Project 1');
 const sampleProject2 = new Project('Project 2');
 const sampleProject3 = new Project('Project 3');
 
@@ -47,9 +49,10 @@ sampleProject3.tasks.push(sampleTask5);
 sampleProject3.tasks.push(sampleTask6);
 projects.push(sampleProject3);
 
+
+export { projects, Project, Task };
 // functions
 
 ////////// load page template //////////
 displayPageTemplate();
-
-console.log(projects);
+displayProjects();
