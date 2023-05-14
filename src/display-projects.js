@@ -61,6 +61,18 @@ function displayProjects() {
                         taskBox.appendChild(taskCompletedMarker);
                             taskCompletedMarker.addEventListener('click', () => {
                                 console.log('task completed marker clicked');
+                                if (task.completed === false) {
+                                    task.completed = true;
+                                    taskCompletedMarker.innerHTML = '✓';
+                                    taskCompletedMarker.style.backgroundColor = '#4CD964';
+                                    taskBox.style.textDecoration = 'line-through';
+                                }
+                                else {
+                                    task.completed = false;
+                                    taskCompletedMarker.innerHTML = '';
+                                    taskCompletedMarker.style.backgroundColor = '#F0EBD8';
+                                    taskBox.style.textDecoration = 'none';
+                                }
                             }
                         );
                 });
