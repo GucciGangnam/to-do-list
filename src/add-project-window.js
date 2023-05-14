@@ -30,10 +30,10 @@ function displayAddProjectWindow() {
                     darkOverlay.remove();
                 });
                 const addProjectWindowBannerTitle = document.createElement('div');
-            addProjectWindowBannerTitle.classList.add('addprojectwindowbannertitle');
-            addProjectWindowBannerTitle.id = 'addprojectwindowbannertitle';
-            addProjectWindowBannerTitle.innerHTML = 'Add Project';
-            addProjectWindowBanner.appendChild(addProjectWindowBannerTitle);
+                addProjectWindowBannerTitle.classList.add('addprojectwindowbannertitle');
+                addProjectWindowBannerTitle.id = 'addprojectwindowbannertitle';
+                addProjectWindowBannerTitle.innerHTML = 'Add Project';
+                addProjectWindowBanner.appendChild(addProjectWindowBannerTitle);
             const addProjectWindowInput = document.createElement('input');
             addProjectWindowInput.classList.add('addprojectwindowinput');
             addProjectWindowInput.id = 'addprojectwindowinput';
