@@ -1,4 +1,6 @@
-
+//imports 
+import { displayProjects } from './display-projects.js';
+import { projects, Project, Task } from './index.js';
 
 
 
@@ -23,6 +25,9 @@ function displayAddProjectWindow() {
             addProjectWindowBanner.appendChild(addProjectWindowBannerCloseBtn);
                 addProjectWindowBannerCloseBtn.addEventListener('click', () => {
                     console.log('add project window close button clicked');
+                    addProjectWindow.remove();
+                    const darkOverlay = document.getElementById('darkoverlay');
+                    darkOverlay.remove();
                 });
                 const addProjectWindowBannerTitle = document.createElement('div');
             addProjectWindowBannerTitle.classList.add('addprojectwindowbannertitle');
@@ -40,7 +45,32 @@ function displayAddProjectWindow() {
             addProjectWindowSubmitBtn.innerHTML = 'Add Project';
             addProjectWindow.appendChild(addProjectWindowSubmitBtn);
                 addProjectWindowSubmitBtn.addEventListener('click', () => {
+                    if (addProjectWindowInput.value === '') {
+                        addProjectWindowInput.placeholder = 'Please enter a project name';
+                        addProjectWindowInput.style.border = '1px solid red';
+                        return;}
+                    if (projects.some(project => project.name === addProjectWindowInput.value)) {
+                        addProjectWindowInput.value = '';
+                        addProjectWindowInput.placeholder = 'Project already exists';
+                        addProjectWindowInput.style.border = '1px solid red';
+                        return;}
+                    if (addProjectWindowInput.value.length > 20) {
+                        addProjectWindowInput.value = '';
+                        addProjectWindowInput.placeholder = 'Project name too long';
+                        addProjectWindowInput.style.border = '1px solid red';
+                        return;}
+
+
                     console.log('add project window submit button clicked');
+                    const newProject = new Project(addProjectWindowInput.value);
+                    projects.push(newProject);
+                    console.log(projects);
+                    addProjectWindow.remove();
+                    const darkOverlay = document.getElementById('darkoverlay');
+                    darkOverlay.remove();
+                    content.innerHTML = '';
+                    displayProjects();
+
                 }
             );
 }

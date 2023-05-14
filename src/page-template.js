@@ -36,6 +36,10 @@ function displayPageTemplate() {
     addProjectBtn.innerHTML = 'Add Project';
     NavBar.appendChild(addProjectBtn);
       addProjectBtn.addEventListener('click', () => {
+        const darkOverlay = document.createElement('div');
+        darkOverlay.classList.add('darkoverlay');
+        darkOverlay.id = 'darkoverlay';
+        document.body.appendChild(darkOverlay);
         displayAddProjectWindow();
       });
 

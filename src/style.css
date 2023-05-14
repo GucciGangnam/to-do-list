@@ -16,6 +16,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 2;
 }
 .navBar div { 
     flex: 1 1 33%;
@@ -106,23 +107,96 @@ body{
 /* ADD PROJECT WINDOW FORM */
 
 .addprojectwindow { 
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
     background-color: #3E5C76;
+    border: 3px solid #F0EBD8;
     border-radius: 15px;
     margin: 10px;
     margin-top: 10px;
     margin-bottom: 50px;
-    width: 30vw;
-    min-width: 400px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 2;
+
+    min-width: 400px;
+    width: 500px;
+    flex-grow: inherit;
 }
     .addprojectwindowbanner { 
         background-color: #F0EBD8;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        top: -1px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        min-height: fit-content;
+        width: 101%
+        
     }
+        .addprojectwindowbannerclosebtn { 
+            position: absolute;
+            left: 10px;
+            background: #FF3B30;
+            border: none;
+            border-radius: 50%;
+            color: #FF3B30;
+        }
+            .addprojectwindowbannerclosebtn:hover { 
+                background: #FF3B30;
+                border: none;
+                border-radius: 50%;
+                color: #000000;
+            }
+        .addprojectwindowbannertitle {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    .addprojectwindowinput { 
+        border-radius: 15px;
+        font-size: 20px;
+        padding: 20px;
+        width: 75%;
+        text-align: center;
 
+    }
+    .addprojectwindowsubmitbtn{ 
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;;
+        background-color: #F0EBD8;
+        margin-bottom: 30px;
+        border: 1px solid #F0EBD8;
+    }
+        .addprojectwindowsubmitbtn:hover { 
+            background-color: #3E5C76;
+            color: #F0EBD8;
+            border-radius: 10px;
+            border: 1px solid #F0EBD8;
+        }
+
+/* OVERLAY DIMMER */
+.darkoverlay { 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
 
@@ -130,14 +204,16 @@ body{
 /* PROJECT BOXES */
 .content { 
     background-color: red;
-    margin-left: 100px;
+    margin-left: 70px;
     display: flex;
+    justify-content: space-evenly;
     gap: 1rem;
     flex-wrap: wrap;
 }
     .projectbox { 
-        min-width: 300px;
-        height: 300px;
+        min-width: 400px;
+        min-height: 300px;
+        max-height: fit-content;
         background-color: #3E5C76;
         border: 3px solid #F0EBD8;
         border-radius: 15px;
