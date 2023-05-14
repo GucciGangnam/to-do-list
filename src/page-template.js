@@ -7,6 +7,8 @@
   // imports 
     //moduels
   import { displayAddProjectWindow } from './add-project-window';
+  import { displayProjects } from './display-projects';
+  import { displayTasksPage } from './display-tasks';
     //images
   import HomeIcon from './icons/Home.png';
   const homeIcon = new Image();
@@ -17,6 +19,7 @@
   import CompletedIcon from './icons/Completed.png';
   const completedIcon = new Image();
   completedIcon.src = CompletedIcon;
+
 
 
 
@@ -42,7 +45,6 @@ function displayPageTemplate() {
         document.body.appendChild(darkOverlay);
         displayAddProjectWindow();
       });
-
     const navBarRight = document.createElement('div');
     navBarRight.classList.add('navBarRight');
     navBarRight.innerHTML = '';
@@ -67,6 +69,9 @@ function displayPageTemplate() {
     vnavBar.appendChild(homeBtn);
       homeBtn.addEventListener('click', () => {
         console.log('home button clicked');
+        document.body.innerHTML = '';
+        displayPageTemplate();
+        displayProjects();
       });
     const tasksBtn = document.createElement('button');
     tasksBtn.classList.add('vnav-btn');
@@ -75,6 +80,7 @@ function displayPageTemplate() {
     vnavBar.appendChild(tasksBtn);
       tasksBtn.addEventListener('click', () => {
         console.log('tasks button clicked');
+        displayTasksPage();
       });
     const completedBtn = document.createElement('button');
     completedBtn.classList.add('vnav-btn');
