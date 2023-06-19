@@ -14,9 +14,15 @@
     import { displayProjects } from './display-projects';
 
 // libraries 
-import { projects, Project, Task } from './index.js';
+import { projects } from './index.js';
+
+
+
+
+
 
 //loop thgrough all tasks in the 'projects' array and add then to a new array in order of due date from soonest to latest
+
 
 
 
@@ -91,10 +97,10 @@ function displayTasksPage () {
         taskListDiv.id = 'taskListDiv';
         content.appendChild(taskListDiv);
         
-
-
-
-
-
 }
 export { displayTasksPage };
+
+
+
+// Extracting all tasks into a single array
+//const allTasks = projects.flatMap(project => project.tasks);

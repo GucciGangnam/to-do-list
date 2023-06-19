@@ -1,7 +1,10 @@
 // imports 
 import { projects, Project, Task } from './index.js';
 import { displayAddTaskWindow } from './add-task-window.js';
-
+    // images 
+    import EditIcon from './icons/Edit.png';
+    const editIcon = new Image();
+    editIcon.src = EditIcon;  
 
 
 
@@ -54,6 +57,16 @@ function displayProjects() {
                         if (task.priority === 'important') {
                             taskBox.style.border = '1px solid red';
                         } 
+
+                        const taskEditImg = document.createElement('img');
+                        taskEditImg.classList.add('taskeditimg');
+                        taskEditImg.id = 'taskeditimg' + task.name;
+                        taskEditImg.src = EditIcon;
+                        taskEditImg.style.width = '20px';
+                        taskEditImg.style.height = '20px';
+                        taskBox.appendChild(taskEditImg);
+
+
                         const taskCompletedMarker = document.createElement('button');
                         taskCompletedMarker.classList.add('taskcompletedmarker');
                         taskCompletedMarker.id = 'taskcompletedmarker' + task.name;
@@ -75,12 +88,14 @@ function displayProjects() {
                                     taskCompletedMarker.innerHTML = '✓';
                                     taskCompletedMarker.style.backgroundColor = '#4CD964';
                                     taskBox.style.textDecoration = 'line-through';
+                                    taskDueDate.style.display = 'none';
                                 }
                                 else {
                                     task.completed = false;
                                     taskCompletedMarker.innerHTML = '';
                                     taskCompletedMarker.style.backgroundColor = '#F0EBD8';
                                     taskBox.style.textDecoration = 'none';
+                                    taskDueDate.style.display = 'block';
                                 }
                             }
                         );
@@ -98,3 +113,4 @@ function displayProjects() {
     });
 }
 export { displayProjects };
+

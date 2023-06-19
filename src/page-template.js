@@ -19,6 +19,9 @@
   import CompletedIcon from './icons/Completed.png';
   const completedIcon = new Image();
   completedIcon.src = CompletedIcon;
+  import EditIcon from './icons/Edit.png';
+  const editIcon = new Image();
+  editIcon.src = EditIcon;
 
 
 

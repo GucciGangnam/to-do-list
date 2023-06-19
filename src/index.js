@@ -33,7 +33,7 @@ const sampleProject2 = new Project('Project 2');
 const sampleProject3 = new Project('Project 3');
 
 const sampleTask1 = new Task('Create ToDo list for Odin', 'This is task 1', '2024-01-01', 'important');
-const sampleTask2 = new Task('Task 2', 'This is task 2', '2034-01-01', 'not important');
+const sampleTask2 = new Task('Task 2', 'This is task 2', '2023-24-05', 'not important');
 sampleProject1.tasks.push(sampleTask1);
 sampleProject1.tasks.push(sampleTask2);
 projects.push(sampleProject1);
